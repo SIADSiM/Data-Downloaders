@@ -59,5 +59,12 @@ if __name__ == "__main__":
   # Get the end date from the user.
   end_date = input("Enter the end date (YYYY-MM-DD): ")
 
-  # Get the location extent from the user.
-  location_extent = input("Enter
+# Get the location extent from the user.
+location_extent = input("Enter the location extent (bounding box or shapefile): ")
+
+# Download the remote sensing data.
+download_remote_sensing_data(source, dataset, output_file, start_date, end_date, location_extent)
+
+# Print a message to the user.
+print("Remote sensing data downloaded successfully to {}.".format(output_file))
+
